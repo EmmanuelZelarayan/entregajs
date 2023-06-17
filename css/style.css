@@ -1,0 +1,248 @@
+.boddy{
+  color: black;
+  background-color: rgb(30, 2, 95);  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+   
+}
+
+.contenedor{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+h1{
+  color: rgb(255, 255, 255);
+  background-color: rgb(98, 0, 255);
+  font-size: 50px;
+  border: solid 8px #5900ff;  
+  text-align: center;
+  margin-top: 0  ;
+  font-family: 'Mynerve', cursive;
+  text-shadow: 4px 2px 2px #1C6EA4;  
+}
+
+.navegador{
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  list-style-type: none;
+  background-color: #3ba1e6;
+}
+
+.menu__item{
+  text-align: center;
+  list-style-type: none;
+  display: inline-block; 
+  margin-right: 40px;
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 5px;
+  padding-block: 2px;
+  
+}
+
+.menu__item a{
+  color: rgb(0, 0, 0);
+}
+
+.menu_item
+
+
+    h2{
+      color: aliceblue
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Shantell+Sans:ital,wght@0,300;0,500;1,300&display=swap');
+
+
+    /* CONTENIDO WEB */
+
+
+  .parrafo1{
+    font-size: x-large;
+    font-family: 'Mynerve', cursive;
+    color: white;
+    text-align: center;
+  }
+
+  .envios2{
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Mynerve', cursive;
+  }
+
+  .tarjeta{
+    margin: 10px;
+    padding: 1px;
+    width: 250px;
+    height: 440px;
+    background-color: #3ba1e6;
+    color: black;
+    font-size: 20px;
+    border: solid 4px #00ffea; 
+    font-family:'Mynerve', cursive; 
+  }
+
+  .imagen1{
+  margin-top: 20px;
+  margin-left: 650px;
+  height: 280px;
+  
+  }
+
+.setup{
+  height:500px;
+  width: 1540px;
+  margin-left: 290px;
+  margin-top: -4000px;
+}
+
+.mapa{
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+iframe{
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}
+
+.comprar{
+  text-align: center;
+  color: rgb(94, 190, 245);
+  margin-top: 50px;
+  font-family: 'Mynerve', cursive;
+}
+
+.registro ul {
+list-style-type: none;
+color: white;
+text-align: center;
+font-size: 30px;
+
+}
+
+
+.graciaspor{
+border: 3px solid #1C6EA4;
+color: rgb(148, 180, 241);
+text-align: center;
+font-size: 100px;
+text-shadow: 3px 2px 2px #0496f8; 
+}
+
+.ñaña{
+  display: flex;
+  justify-content: center;
+  align-content: center;  
+}
+
+.Apellido{
+  color: rgb(25, 81, 235);
+  font-family: 'Mynerve', cursive;
+  
+}
+
+.Edad{
+  color: rgb(25, 81, 235);
+  font-family: 'Mynerve', cursive;
+}
+.Nombre{
+  color: rgb(25, 81, 235);
+  font-family: 'Mynerve', cursive;
+}
+.item__mensaje{
+  resize: none;
+}
+.terminos{
+  color: rgb(255, 0, 0);
+  font-family: 'Mynerve', cursive;
+}
+
+
+/* PRDODUCTOS EN OFERTA */ 
+
+.cartita{
+  width: 300px;
+  background-color: rgb(19, 231, 161);
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-inline: 22px;
+
+}
+
+.cartita__imagen{
+  width: 100%;  
+}
+
+.cartita__titulo{
+  font-size: 22px;
+}
+
+.cartita__parrafo{  
+  font-size: 18px;
+}
+
+.cartita__boton{
+  background-color: #6ff006;
+  border:0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cartita__imagen,
+.cartita__titulo,
+.cartita__parrafo
+.cartita__boton{
+  margin-bottom: 0.2px;
+}
+
+.precios{
+  color: red;
+  text-decoration: line-through;
+}
+
+.precios2{
+  text-decoration: solid;
+  font-size: 20px;
+
+}
+
+/*  PRODUCTOS  */
+
+.Productos{
+  color: aliceblue;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+  text-shadow: 4px 2px 2px rgb(0, 0, 0);
+
+}
+
+.Pie{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.parrafo1{
+  color: aliceblue;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  text-shadow: 4px 2px 2px rgb(0, 0, 0);
+}
+
+.OFERTA__MES{  
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 100px;
+  text-shadow: 3px 2px 2px #0099ff;
+  padding: 0px; 
+}
