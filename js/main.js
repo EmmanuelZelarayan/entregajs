@@ -61,27 +61,33 @@ for (let i = 10; i <= 20; i++){
 
 alert ("Bienvenido nuevamente: " + nombre + "\n" + "Tu entrega sera el dia: " + dia + fecha )
 
-alert ("Gracias por visitarnos")
+const productos = [
+    {id: 1, producto: "Procesadores"},
+    {id: 2, producto: "Mothers"},
+    {id: 3, producto: "PlacasGraficas"},
+    {id: 4, producto: "Fuentes"},
+    {id: 5, producto: "Almacenamientos"},
+    {id: 6, producto: "Perifericos"},
+    {id: 7, producto: "Gabinetes"},
+    {id: 8, producto: "Mousepads"}
+];
 
+console.log(productos);
 
-// array
+let productobuscado = prompt("Ingrese el producto a buscar");
+let encontrado = false;
 
-const productos = ["Procesadores", "Mothers", "PlacasGraficas", "Fuentes", "Almacenamientos", "Perifericos", "Gabinetes", "Mousepads"];
-
-console.log (productos);
-let cantidad = productos;
-console.log (productos.length);
-
-for (let i = 0; i < productos.length; i++){
-    console.log(productos [i]);
-}
-
-let productobuscado= prompt ("Ingrese el producto a buscar");
-let encontrado = productos.includes(productobuscado);
-
-if(encontrado){
-        alert ("El Producto: " + productobuscado +" se encuentra en la lista!");
+for (const producto of productos) {
+    if (producto.producto === productobuscado) {
+    encontrado = true;
+    break;
     }
-        else { 
-            alert ("No se encontró el producto!");
 }
+
+if (encontrado) {
+    alert("Producto encontrado");
+} else {
+    alert("Producto no encontrado");
+    console.log (encontrado)
+}
+alert ("Gracias por visitarnos")
