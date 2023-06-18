@@ -69,16 +69,19 @@ alert ("Gracias por visitarnos")
 const productos = ["Procesadores", "Mothers", "PlacasGraficas", "Fuentes", "Almacenamientos", "Perifericos", "Gabinetes", "Mousepads"];
 
 console.log (productos);
-console.log (productos[0])
-
-
-/* lenght */
+let cantidad = productos;
 console.log (productos.length);
+
 for (let i = 0; i < productos.length; i++){
     console.log(productos [i]);
 }
 
-function Producto(FuenteSentey, $15000) {
-    this.nombre = FuenteSentey;
-    this.precio = $15000; 
+let productobuscado= prompt ("Ingrese el producto a buscar");
+let encontrado = productos.includes(productobuscado);
+
+if(encontrado){
+        alert ("El Producto: " + productobuscado +" se encuentra en la lista!");
     }
+        else { 
+            alert ("No se encontró el producto!");
+}
