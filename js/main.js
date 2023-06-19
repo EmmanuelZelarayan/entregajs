@@ -1,7 +1,4 @@
 alert ("Bienvenido a CompuTuc");
-
-//Indicanos tu nombre
-
 let nombre= prompt("Ingrese su nombre");
 let apellido= prompt ("Ingrese su apellido");
 let edad = Number (prompt ("Ingrese su edad") );
@@ -25,12 +22,15 @@ function mostrardatos() {
     console.log ("Apellido: " + persona.apellido)
     console.log ("Edad: " + persona.edad)
 }
+    mostrardatos (persona);
 
-function saludar ( cliente) {
-    console.log ("Hola " + nombre);
-    }
-    saludar("cliente");
     
+
+function saludar (cliente) {
+    console.log ("Hola" + cliente);
+    }
+    saludar(nombre);
+
 
 if (persona.edad >= 18) {
     mostrardatos ();
@@ -62,14 +62,14 @@ for (let i = 10; i <= 20; i++){
 alert ("Bienvenido nuevamente: " + nombre + "\n" + "Tu entrega sera el dia: " + dia + fecha )
 
 const productos = [
-    {id: 1, producto: "Procesadores"},
-    {id: 2, producto: "Mothers"},
-    {id: 3, producto: "PlacasGraficas"},
-    {id: 4, producto: "Fuentes"},
-    {id: 5, producto: "Almacenamientos"},
-    {id: 6, producto: "Perifericos"},
-    {id: 7, producto: "Gabinetes"},
-    {id: 8, producto: "Mousepads"}
+    {id: 1, producto: "Procesadores", precio: "$100.000"},
+    {id: 2, producto: "Mothers", precio: "$60.000"},
+    {id: 3, producto: "PlacasGraficas", precio: "$150.000"},
+    {id: 4, producto: "Fuentes", precio: "$30.000"},
+    {id: 5, producto: "Almacenamientos", precio: "$18.000"},
+    {id: 6, producto: "Perifericos", precio: "$15.000"},
+    {id: 7, producto: "Gabinetes", precio: "$50.000"},
+    {id: 8, producto: "Mousepads", precio: "$5.000"}
 ];
 
 console.log(productos);
@@ -91,3 +91,6 @@ if (encontrado) {
     console.log (encontrado)
 }
 alert ("Gracias por visitarnos")
+
+
+
