@@ -1,96 +1,167 @@
-alert ("Bienvenido a CompuTuc");
-let nombre= prompt("Ingrese su nombre");
-let apellido= prompt ("Ingrese su apellido");
-let edad = Number (prompt ("Ingrese su edad") );
-if (edad >= 18){
-    alert ("Sos mayor de edad. Podes ingresar");}
-else { 
-    alert("Sos menor de edad. No podes ingresar"); 
-    const persona1 = {nombre: nombre, apellido:apellido, edad:edad };
-    console.log (persona);
-} 
+document.addEventListener("DOMContentLoaded", function() {
+    const myForm = document.getElementById("myForm");
+    const dataContainer = document.getElementById("dataContainer");
+    const dataForm = document.getElementById("dataForm");
 
-const persona = { 
-    nombre: (nombre),
-    apellido: (apellido),
-    edad: (edad),
-    
-};
+    myForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
 
-function mostrardatos() {
-    console.log ("Nombre: " + persona.nombre)
-    console.log ("Apellido: " + persona.apellido)
-    console.log ("Edad: " + persona.edad)
-}
-    mostrardatos (persona);
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const edad = document.getElementById("edad").value;
+        const provincia = document.getElementById("provincia").value;
 
-    
+        const persona = {
+            nombre: nombre,
+            apellido: apellido,
+            edad: edad,
+            provincia: provincia
+        };
 
-function saludar (cliente) {
-    console.log ("Hola" + cliente);
+        guardarDatos(persona);
+        mostrarResultados(persona);
+    });
+
+    function guardarDatos(persona) {
+        const personaJSON = JSON.stringify(persona);
+        
+        localStorage.setItem("datosPersona", personaJSON);
     }
-    saludar(nombre);
+    function mostrarResultados(persona) {
+        console.log("Nombre:", persona.nombre);
+        console.log("Apellido:", persona.apellido);
+        console.log("Edad:", persona.edad);
+        console.log("Provincia:", persona.provincia);
 
+        
+        document.getElementById("nombreData").value = persona.nombre;
+        document.getElementById("apellidoData").value = persona.apellido;
+        document.getElementById("edadData").value = persona.edad;
+        document.getElementById("provinciaData").value = persona.provincia;
 
-if (persona.edad >= 18) {
-    mostrardatos ();
-} else { 
-    console.log ("No! Es menor de edad!");
-}
-
-
-let dia = prompt("Ingrese un dia: " + "\n" + "Lunes" + "\n" + "Martes" + "\n" + "Miercoles" + "\n" + "Jueves" + "\n" + "Viernes" + "\n" + "Sabado") .toUpperCase();
-
-let diaError = false
-
-if ((dia === "LUNES" ) || (dia === "MARTES" ) || (dia === "MIERCOLES" ) || (dia === "JUEVES" ) || (dia === "VIERNES" ) || (dia === "SABADO" )) {
-    alert ("Tu entrega sera el dia " + dia);
-}else {
-    alert  (prompt("Dia incorrecto"))
-}
-
-
-let fecha = prompt("Ingrese una fecha " + "\n" + "De 1 a 30")
-
-for (let i = 10; i <= 20; i++){
-    if ( i== 10 ) {
-        break;
+        dataContainer.classList.remove("hidden");
     }
-    alert (i);
-}
 
-alert ("Bienvenido nuevamente: " + nombre + "\n" + "Tu entrega sera el dia: " + dia + fecha )
-
-const productos = [
-    {id: 1, producto: "Procesadores", precio: "$100.000"},
-    {id: 2, producto: "Mothers", precio: "$60.000"},
-    {id: 3, producto: "PlacasGraficas", precio: "$150.000"},
-    {id: 4, producto: "Fuentes", precio: "$30.000"},
-    {id: 5, producto: "Almacenamientos", precio: "$18.000"},
-    {id: 6, producto: "Perifericos", precio: "$15.000"},
-    {id: 7, producto: "Gabinetes", precio: "$50.000"},
-    {id: 8, producto: "Mousepads", precio: "$5.000"}
-];
-
-console.log(productos);
-
-let productobuscado = prompt("Ingrese el producto a buscar");
-let encontrado = false;
-
-for (const producto of productos) {
-    if (producto.producto === productobuscado) {
-    encontrado = true;
-    break;
+    const datosAlmacenados = localStorage.getItem("datosPersona");
+    if (datosAlmacenados) {
+        const personaAlmacenada = JSON.parse(datosAlmacenados);
+        mostrarResultados(personaAlmacenada);
     }
+});
+
+
+///////////////////////* VEAMOS QUE ONDA */
+
+/* let cartItems = [];
+
+function addToCart(itemName, price) {
+  cartItems.push({ itemName, price });
+  updateCart();
 }
 
-if (encontrado) {
-    alert("Producto encontrado");
-} else {
-    alert("Producto no encontrado");
-    console.log (encontrado)
+function updateCart() {
+    console.log('Productos añadidos:');
+    for (let i = 0; i < cartItems.length; i++) {
+        const item = cartItems[i];
+        console.log(`Item Name: ${item.itemName}, Price: $${item.price}`);
+    }
+  const cartItemsElement = document.getElementById('cartItems');
+  cartItemsElement.innerHTML = '';
+
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.classList.add('cart-item');
+
+    const itemNameElement = document.createElement('h4');
+    itemNameElement.textContent = item.itemName;
+
+    const priceElement = document.createElement('h3');
+    priceElement.textContent = `$${item.price}`;
+
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Eliminar';
+    removeButton.addEventListener('click', () => removeItem(i));
+
+    cartItemDiv.appendChild(itemNameElement);
+    cartItemDiv.appendChild(priceElement);
+    cartItemDiv.appendChild(removeButton);
+
+    cartItemsElement.appendChild(cartItemDiv);
 }
-alert ("Gracias por visitarnos")
+}
+
+function removeItem(index) {
+  cartItems.splice(index, 1);
+  updateCart();
+} */ 
 
 
+let cartItems = [];
 
+function addToCart(itemName, price) {
+  cartItems.push({ itemName, price });
+  updateCart();
+  displayCart();
+}
+
+function updateCart() {
+  const cartItemsElement = document.getElementById('cartItems');
+  cartItemsElement.innerHTML = '';
+
+  let total = 0;
+
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.classList.add('cart-item');
+
+    const itemNameElement = document.createElement('h4');
+    itemNameElement.textContent = item.itemName;
+
+    const priceElement = document.createElement('h3');
+    priceElement.textContent = `$${item.price}`;
+
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Eliminar';
+    removeButton.addEventListener('click', () => removeItem(i));
+
+    cartItemDiv.appendChild(itemNameElement);
+    cartItemDiv.appendChild(priceElement);
+    cartItemDiv.appendChild(removeButton);
+
+    cartItemsElement.appendChild(cartItemDiv);
+
+    total += item.price;
+  }
+
+  const totalElement = document.getElementById('total');
+  totalElement.textContent = `Total: $${total}`;
+
+  displayCart();
+}
+
+function removeItem(index) {
+  cartItems.splice(index, 1);
+  updateCart();
+  displayCart();
+}
+
+function displayCart() {
+  console.log('Cart Items:');
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+    console.log(`Item Name: ${item.itemName}, Price: $${item.price}`);
+  }
+  console.log(`Total: $${getTotal()}`);
+}
+
+function getTotal() {
+  let total = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    total += cartItems[i].price;
+  }
+  return total;
+}

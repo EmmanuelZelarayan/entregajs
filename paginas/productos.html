@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../multimedia/img/You know who he is____.jfif" type="image/x-icon">
     <title>Inicio - Bienvenidos!</title>
     <link rel="stylesheet" href="../css/style.css">
-    
+    <script src="../js/main.js"></script>    
 </head>
 <body class="boddy">  
    <div class="contenedor">
@@ -35,9 +35,9 @@
       </header> 
 
       <main>
-          <div>
-     <h2 class="Productos">PRODUCTOS</h2>
-          </div>
+         <div>
+   <h2 class="Productos">PRODUCTOS</h2>
+         </div>
    <aside>
 
          <div class="tarjeta">
@@ -60,75 +60,125 @@
          </div>
    </aside>
          <img class="setup" src="../multimedia/img/Precio-Calidad.jpg" alt="PRODUCTOS">
-         <br>
-         <br>
-         <br>
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/arusi.jpg" alt="AURICULARES HYPERX CLOUDSTINGER">
-            <h4 class="cartita__titulo">AURICULARES HYPERX CLOUDSTINGER</h4>
-            <h3 class="precios"> $25.000</h3>
-            <p class="precios2">$19.999.-</p>
-            <p class="cartita__parrafo">¡Experimentá la adrenalina de sumergirte en la escena de otra manera!</p>
-            <button class="cartita__boton"> COMPRAR </button>        
-         </div>
-         
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/TECLADITO.jpg" alt="TECLADO MECANICO XSOUL">
-            <h4 class="cartita__titulo">TECLADO MECANICO XSOUL</h4>
-            <h3 class="precios"> $8.000</h3>
-            <p class="precios2">$4.999.-</p>
-            <p class="cartita__parrafo">Este teclado Soul de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos.</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/GORDO.jpg" alt="GABINETE COOLER MASTER">
-            <h4 class="cartita__titulo">GABINETE COOLER MASTER</h4>
-            <h3 class="precios"> $12.000</h3>
-            <p class="precios2">$9.999.-</p>
-            <p class="cartita__parrafo"> El mejor gabinete con filtros para ventilar y cuidar del polvo tu setup!</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/MOUSE.jpg" alt="MOUSE LOGITECH G305">
-            <h4 class="cartita__titulo">MOUSE LOGITECH G305</h4>
-            <h3 class="precios"> $8.000</h3>
-            <p class="precios2">$4.999.-</p>
-            <p class="cartita__parrafo">Logitech diseña productos y experiencias que ocupan un lugar cotidiano en la vida de las personas.</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/PLAQUITA.jpg" alt="PLACA DE VIDEO GEFORCE">
-            <h4 class="cartita__titulo">PLACA ZOTAC 1650</h4>
-            <h3 class="precios"> $70.000</h3>
-            <p class="precios2">$64.999.-</p> 
-            <p class="cartita__parrafo">PLACA DE VIDEO ZOTAC GTX 1650 OC PLACA DE VIDEO 4GB GDDR6 ZT-T16520F-10L</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-<br>
-<br>
-<br>
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/cooler rgb.jpg" alt="COOLER RGB">
-            <h4 class="cartita__titulo">COOLER RGB</h4>
-            <h3 class="precios"> $5.000</h3>
-            <p class="precios2">$4.999.-</p>
-            <p class="cartita__parrafo"> Ventilador facherito</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-         
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/concepto-5514806.jpg" alt="WATER COOLING">
-            <h4 class="cartita__titulo">WATER COOLING</h4>
-            <h3 class="precios"> $20.000</h3>
-            <p class="precios2">$14.999.-</p>
-            <p class="cartita__parrafo">Water Cooling facherito!</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div> 
-
-         <div class="cartita">
+         <body>
+            <section class="ventas">
+              <div class="cartita">
+                <img
+                  class="cartita__imagen"
+                  src="../multimedia/img/arusi.jpg"
+                  alt="AURICULARES HYPERX CLOUDSTINGER"
+                />
+                <h4 class="cartita__titulo">AURICULARES HYPERX CLOUDSTINGER</h4>
+                <h3 class="precios">$25.000</h3>
+                <p class="precios2">$19.999.-</p>
+                <p class="cartita__parrafo">
+                  ¡Experimentá la adrenalina de sumergirte en la escena de otra
+                  manera!
+                </p>
+                <button
+                  class="cartita__boton"
+                  onclick="addToCart('AURICULARES HYPERX CLOUDSTINGER', 19999)"
+                >
+                  COMPRAR
+                </button>
+              </div>
+              <div class="cartita">
+                <img
+                  class="cartita__imagen"
+                  src="../multimedia/img/TECLADITO.jpg"
+                  alt="TECLADO MECANICO XSOUL"
+                />
+                <h4 class="cartita__titulo">TECLADO MECANICO XSOUL</h4>
+                <h3 class="precios">$8.000</h3>
+                <p class="precios2">$4.999.-</p>
+                <p class="cartita__parrafo">
+                  Este teclado Soul de alto rendimiento permite que puedas
+                  disfrutar de horas ilimitadas de juegos.
+                </p>
+                <button
+                  class="cartita__boton"
+                  onclick="addToCart('TECLADO MECANICO XSOUL', 4999)"
+                >
+                  COMPRAR
+                </button>
+              </div>
+              <div class="cartita">
+                <img
+                  class="cartita__imagen"
+                  src="../multimedia/img/GORDO.jpg"
+                  alt="GABINETE COOLER MASTER"
+                />
+                <h4 class="cartita__titulo">GABINETE COOLER MASTER</h4>
+                <h3 class="precios">$12.000</h3>
+                <p class="precios2">$9.999.-</p>
+                <p class="cartita__parrafo">
+                  El mejor gabinete con filtros para ventilar y cuidar del polvo
+                  tu setup!
+                </p>
+                <button
+                  class="cartita__boton"
+                  onclick="addToCart('GABINETE COOLER MASTER', 9999)"
+                >
+                  COMPRAR
+                </button>
+              </div>
+              <div class="cartita">
+                <img
+                  class="cartita__imagen"
+                  src="../multimedia/img/MOUSE.jpg"
+                  alt="MOUSE LOGITECH G305"
+                />
+                <h4 class="cartita__titulo">MOUSE LOGITECH G305</h4>
+                <h3 class="precios">$8.000</h3>
+                <p class="precios2">$4.999.-</p>
+                <p class="cartita__parrafo">
+                  Logitech diseña productos y experiencias que ocupan un lugar
+                  cotidiano en la vida de las personas.
+                </p>
+                <button
+                  class="cartita__boton"
+                  onclick="addToCart('MOUSE LOGITECH G305', 4999)"
+                >
+                  COMPRAR
+                </button>
+              </div>
+              <div class="cartita">
+                <img
+                  class="cartita__imagen"
+                  src="../multimedia/img/PLAQUITA.jpg"
+                  alt="PLACA DE VIDEO GEFORCE"
+                />
+                <h4 class="cartita__titulo">PLACA ZOTAC 1650</h4>
+                <h3 class="precios">$70.000</h3>
+                <p class="precios2">$64.999.-</p>
+                <p class="cartita__parrafo">
+                  PLACA DE VIDEO ZOTAC GTX 1650 OC PLACA DE VIDEO 4GB GDDR6
+                  ZT-T16520F-10L
+                </p>
+                <button
+                  class="cartita__boton"
+                  onclick="addToCart('PLACA ZOTAC 1650', 64999)"
+                >
+                  COMPRAR
+                </button>
+              </div>
+              <div class="cartita">
+                <img class="cartita__imagen" src="../multimedia/img/memoria ram.jpg" alt="MEMORIA RAM">
+                <h4 class="cartita__titulo">Memoria Ram HyperX 8GB DDR4</h4>
+                <h3 class="precios"> $27.000</h3>
+                <p class="precios2">$21.999.-</p>
+                <p class="cartita__parrafo"> Memoria Ram HyperX DDR4 8GB 2666mhz</p>
+                <button class="cartita__boton"> COMPRAR </button>
+             </div>
+             <div class="cartita">
+              <img class="cartita__imagen" src="../multimedia/img/ryzen3.jpg" alt="Ryzen 3 PRO 4350g">
+              <h4 class="cartita__titulo">Ryzen 3 PRO 4350g</h4>
+              <h3 class="precios"> $28.000</h3>
+              <p class="precios2">$24.999.-</p>
+              <p class="cartita__parrafo"> Procesador bien facherito</p>
+              <button class="cartita__boton"> COMPRAR </button>
+           </div>
+           <div class="cartita">
             <img class="cartita__imagen" src="../multimedia/img/Sentey Fuente 600W 80 Plus Bronze HBP600-GS 1.jpg" alt="FUENTE SENTEY 600W">
             <h4 class="cartita__titulo">Fuente Sentey 600w 80Plus</h4>
             <h3 class="precios"> $18.000</h3>
@@ -136,28 +186,12 @@
             <p class="cartita__parrafo"> Fuente bien piola!</p>
             <button class="cartita__boton"> COMPRAR </button>
          </div>
-
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/ryzen3.jpg" alt="Ryzen 3 PRO 4350g">
-            <h4 class="cartita__titulo">Ryzen 3 PRO 4350g</h4>
-            <h3 class="precios"> $28.000</h3>
-            <p class="precios2">$24.999.-</p>
-            <p class="cartita__parrafo"> Procesador bien facherito</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-
-         <div class="cartita">
-            <img class="cartita__imagen" src="../multimedia/img/memoria ram.jpg" alt="MEMORIA RAM">
-            <h4 class="cartita__titulo">Memoria Ram HyperX 8GB DDR4</h4>
-            <h3 class="precios"> $27.000</h3>
-            <p class="precios2">$21.999.-</p>
-            <p class="cartita__parrafo"> Memoria Ram HyperX DDR4 8GB 2666mhz</p>
-            <button class="cartita__boton"> COMPRAR </button>
-         </div>
-      </main>
-<br>
-<br>
-<hr>
+          </main>
+            </section>
+            <h1>Carrito de Compras</h1>
+            <div id="cartItems"></div>
+            <div id="total"></div>
+          </body>
 <footer class="Pie">
             Todos los derechos reservados
 </footer>

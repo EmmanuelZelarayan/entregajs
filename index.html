@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenidos! | COMPU-TUC</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./multimedia/img/ryzen3.jpg"
+      type="image/x-icon"
+    />
   </head>
   <body class="boddy">
-    <script src="script.js"></script>
     <script src="./js/main.js"></script>
     <div class="contenedor">
       <header>
@@ -33,8 +37,49 @@
           </ul>
         </nav>
       </header>
-      <br />
-      <br />
+      <div class="container">
+        <h2>Formulario</h2>
+        <form id="myForm">
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required />
+          </div>
+          <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required />
+          </div>
+          <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required />
+          </div>
+          <div>
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" required />
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="container hidden" id="dataContainer">
+        <h2>Datos Ingresados</h2>
+        <form id="dataForm">
+          <div>
+            <label for="nombreData">Nombre:</label>
+            <input type="text" id="nombreData" readonly />
+          </div>
+          <div>
+            <label for="apellidoData">Apellido:</label>
+            <input type="text" id="apellidoData" readonly />
+          </div>
+          <div>
+            <label for="edadData">Edad:</label>
+            <input type="text" id="edadData" readonly />
+          </div>
+          <div>
+            <label for="provinciaData">Provincia:</label>
+            <input type="text" id="provinciaData" readonly />
+          </div>
+        </form>
+      </div>
       <main>
         <aside>
           <div class="tarjeta">
@@ -60,82 +105,153 @@
         <div class="OFERTA__MES">
           <p>¡OFERTA DEL MES!</p>
         </div>
-        <div class="cartita">
-          <img
-            class="cartita__imagen"
-            src="./multimedia/img/arusi.jpg"
-            alt="AURICULARES HYPERX CLOUDSTINGER"
-          />
-          <h4 class="cartita__titulo">AURICULARES HYPERX CLOUDSTINGER</h4>
-          <h3 class="precios">$25.000</h3>
-          <p class="precios2">$19.999.-</p>
-          <p class="cartita__parrafo">
-            ¡Experimentá la adrenalina de sumergirte en la escena de otra
-            manera!
-          </p>
-          <button class="cartita__boton">COMPRAR</button>
-        </div>
-
-        <div class="cartita">
-          <img
-            class="cartita__imagen"
-            src="./multimedia/img/TECLADITO.jpg"
-            alt="TECLADO MECANICO XSOUL"
-          />
-          <h4 class="cartita__titulo">TECLADO MECANICO XSOUL</h4>
-          <h3 class="precios">$8.000</h3>
-          <p class="precios2">$4.999.-</p>
-          <p class="cartita__parrafo">
-            Este teclado Soul de alto rendimiento permite que puedas disfrutar
-            de horas ilimitadas de juegos.
-          </p>
-          <button class="cartita__boton">COMPRAR</button>
-        </div>
-        <div class="cartita">
-          <img
-            class="cartita__imagen"
-            src="./multimedia/img/GORDO.jpg"
-            alt="GABINETE COOLER MASTER"
-          />
-          <h4 class="cartita__titulo">GABINETE COOLER MASTER</h4>
-          <h3 class="precios">$12.000</h3>
-          <p class="precios2">$9.999.-</p>
-          <p class="cartita__parrafo">
-            El mejor gabinete con filtros para ventilar y cuidar del polvo tu
-            setup!
-          </p>
-          <button class="cartita__boton">COMPRAR</button>
-        </div>
-        <div class="cartita">
-          <img
-            class="cartita__imagen"
-            src="./multimedia/img/MOUSE.jpg"
-            alt="MOUSE LOGITECH G305"
-          />
-          <h4 class="cartita__titulo">MOUSE LOGITECH G305</h4>
-          <h3 class="precios">$8.000</h3>
-          <p class="precios2">$4.999.-</p>
-          <p class="cartita__parrafo">
-            Logitech diseña productos y experiencias que ocupan un lugar
-            cotidiano en la vida de las personas.
-          </p>
-          <button class="cartita__boton">COMPRAR</button>
-        </div>
-        <div class="cartita">
-          <img
-            class="cartita__imagen"
-            src="./multimedia/img/PLAQUITA.jpg"
-            alt="PLACA DE VIDEO GEFORCE"
-          />
-          <h4 class="cartita__titulo">PLACA ZOTAC 1650</h4>
-          <h3 class="precios">$70.000</h3>
-          <p class="precios2">$64.999.-</p>
-          <p class="cartita__parrafo">
-            PLACA DE VIDEO ZOTAC GTX 1650 OC PLACA DE VIDEO 4GB GDDR6
-            ZT-T16520F-10L
-          </p>
-          <button class="cartita__boton">COMPRAR</button>
-        </div>
+        <body>
+          <section class="ventas">
+            <div class="cartita">
+              <img
+                class="cartita__imagen"
+                src="./multimedia/img/arusi.jpg"
+                alt="AURICULARES HYPERX CLOUDSTINGER"
+              />
+              <h4 class="cartita__titulo">AURICULARES HYPERX CLOUDSTINGER</h4>
+              <h3 class="precios">$25.000</h3>
+              <p class="precios2">$19.999.-</p>
+              <p class="cartita__parrafo">
+                ¡Experimentá la adrenalina de sumergirte en la escena de otra
+                manera!
+              </p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('AURICULARES HYPERX CLOUDSTINGER', 19999)"
+              >
+                COMPRAR
+              </button>
+            </div>
+            <div class="cartita">
+              <img
+                class="cartita__imagen"
+                src="./multimedia/img/TECLADITO.jpg"
+                alt="TECLADO MECANICO XSOUL"
+              />
+              <h4 class="cartita__titulo">TECLADO MECANICO XSOUL</h4>
+              <h3 class="precios">$8.000</h3>
+              <p class="precios2">$4.999.-</p>
+              <p class="cartita__parrafo">
+                Este teclado Soul de alto rendimiento permite que puedas
+                disfrutar de horas ilimitadas de juegos.
+              </p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('TECLADO MECANICO XSOUL', 4999)"
+              >
+                COMPRAR
+              </button>
+            </div>
+            <div class="cartita">
+              <img
+                class="cartita__imagen"
+                src="./multimedia/img/GORDO.jpg"
+                alt="GABINETE COOLER MASTER"
+              />
+              <h4 class="cartita__titulo">GABINETE COOLER MASTER</h4>
+              <h3 class="precios">$12.000</h3>
+              <p class="precios2">$9.999.-</p>
+              <p class="cartita__parrafo">
+                El mejor gabinete con filtros para ventilar y cuidar del polvo
+                tu setup!
+              </p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('GABINETE COOLER MASTER', 9999)"
+              >
+                COMPRAR
+              </button>
+            </div>
+            <div class="cartita">
+              <img
+                class="cartita__imagen"
+                src="./multimedia/img/MOUSE.jpg"
+                alt="MOUSE LOGITECH G305"
+              />
+              <h4 class="cartita__titulo">MOUSE LOGITECH G305</h4>
+              <h3 class="precios">$8.000</h3>
+              <p class="precios2">$4.999.-</p>
+              <p class="cartita__parrafo">
+                Logitech diseña productos y experiencias que ocupan un lugar
+                cotidiano en la vida de las personas.
+              </p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('MOUSE LOGITECH G305', 4999)"
+              >
+                COMPRAR
+              </button>
+            </div>
+            <div class="cartita">
+              <img
+                class="cartita__imagen"
+                src="./multimedia/img/PLAQUITA.jpg"
+                alt="PLACA DE VIDEO GEFORCE"
+              />
+              <h4 class="cartita__titulo">PLACA ZOTAC 1650</h4>
+              <h3 class="precios">$70.000</h3>
+              <p class="precios2">$64.999.-</p>
+              <p class="cartita__parrafo">
+                PLACA DE VIDEO ZOTAC GTX 1650 OC PLACA DE VIDEO 4GB GDDR6
+                ZT-T16520F-10L
+              </p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('PLACA ZOTAC 1650', 64999)"
+              >
+                COMPRAR
+              </button>
+            </div>
+            <div class="cartita">
+              <img class="cartita__imagen" src="../multimedia/img/memoria ram.jpg" alt="MEMORIA RAM">
+              <h4 class="cartita__titulo">Memoria Ram HyperX 8GB DDR4</h4>
+              <h3 class="precios"> $27.000</h3>
+              <p class="precios2">$21.999.-</p>
+              <p class="cartita__parrafo"> Memoria Ram HyperX DDR4 8GB 2666mhz</p>
+              <button
+                class="cartita__boton"
+                onclick="addToCart('Memoria Ram HyperX 8GB DDR4', 21999)"
+              >
+                COMPRAR
+              </button>
+           </div>
+           <div class="cartita">
+            <img class="cartita__imagen" src="../multimedia/img/ryzen3.jpg" alt="Ryzen 3 PRO 4350g">
+            <h4 class="cartita__titulo">Ryzen 3 PRO 4350g</h4>
+            <h3 class="precios"> $28.000</h3>
+            <p class="precios2">$24.999.-</p>
+            <p class="cartita__parrafo"> Procesador bien facherito</p>
+            <button
+            class="cartita__boton"
+            onclick="addToCart('Ryzen 3 PRO 4350g', 24999)"
+          >
+            COMPRAR
+          </button>
+         </div>
+         <div class="cartita">
+          <img class="cartita__imagen" src="../multimedia/img/Sentey Fuente 600W 80 Plus Bronze HBP600-GS 1.jpg" alt="FUENTE SENTEY 600W">
+          <h4 class="cartita__titulo">Fuente Sentey 600w 80Plus</h4>
+          <h3 class="precios"> $18.000</h3>
+          <p class="precios2">$14.999.-</p>
+          <p class="cartita__parrafo"> Fuente bien piola!</p>
+          <button
+            class="cartita__boton"
+            onclick="addToCart('Fuente Sentey 600w 80Plus', 14999)"
+          >
+            COMPRAR
+          </button>
+       </div>
+        </main>
+          </section>
+          <h1>Carrito de Compras</h1>
+          <div id="cartItems"></div>
+          <div id="total"></div>
+        </body>
       </main>
       <br />
       <br />
